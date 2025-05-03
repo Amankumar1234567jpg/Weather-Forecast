@@ -1,0 +1,22 @@
+.map1-full-body {
+  /* margin: 0; */
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #eef;
+}
+
+#map1-text {
+  margin: 20px 0;
+  /* background-color: black; */
+}
+
+#map1 {
+  width: 90%;
+  height: 80vh;
+  margin: auto;
+  border: 2px solid #333;
+}
+
+
+
+  

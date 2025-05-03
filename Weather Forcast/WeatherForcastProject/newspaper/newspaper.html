@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive News Website</title>
+  <link rel="stylesheet" href="./newspaper.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/qweather-icons@1.6.0/font/qweather-icons.css">
+</head>
+<body>
+<label class="news-body">
+    <div class="back-button">
+        <a href="\Weather Forcast\WeatherForcastProject\Main.html"><button>Back</button></a>
+    </div>
+  <div class="news-container">
+    <h1 class="news-heading"> News</h1>
+    <div class="tabs">
+      <button class="tab-btn active" onclick="showTab(event, 'world')">World</button>
+      <button class="tab-btn" onclick="showTab(event, 'technology')">Technology</button>
+      <button class="tab-btn" onclick="showTab(event, 'sports')">Sports</button>
+      <button class="tab-btn" onclick="showTab(event, 'weather')">Weather</button>
+    </div>
+    <div id="world" class="tab-content active">
+      <h2 class="news-text">World News</h2>
+      <ul id="world-news" class="news-list"></ul>
+    </div>
+    <div id="technology" class="tab-content">
+      <h2 class="news-text">Technology News</h2>
+      <ul id="technology-news" class="news-list"></ul>
+    </div>
+    <div id="sports" class="tab-content">
+      <h2 class="news-text">Sports News</h2>
+      <ul id="sports-news" class="news-list"></ul>
+    </div>
+    <!-- <div id="weather" class="tab-content">
+      <h2>Weather</h2>
+      <div id="weather-result"></div>
+    </div> -->
+  </div>
+</label>  
+  <script src="./newspaper.js"></script>
+</body>
+</html>

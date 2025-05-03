@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forcast</title>
+    <link rel="stylesheet" href="./sidebar/sidebar.css">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./Map/map.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+</head>
+<body>
+    <nav class="navbar">
+        <div id="nav-txt"> WEATHER FORCAST</div>
+    </nav>
+    <sidebar>
+        <label>
+            <input id="sidebar-input-checkbox" type="checkbox">
+            <div class="toggle">
+                <span class="topline common"></span>
+                <span class="midline common"></span>
+                <span class="bottomline common"></span>
+            </div>
+            <div class="slide">
+                <h1 id="sidebar-txt"> Setting </h1>
+                <ul> 
+                    <li><a href=""><i class="fa-solid fa-user"></i><span> Profile</span></a></li>
+                    <li><a href=""><i class="fa-solid fa-gamepad"></i></i><span> Matche</span></a></li>
+                    <li><a href=""><i class="fa-solid fa-play"></i><span> How To Play</span></a></li>
+                    <li><a href=""><i class="fa-solid fa-wallet"></i><span> Wallet</span></a></li>
+                    <li><a href=""><i class="fa-solid fa-phone"></i><span> Support</span></a></li>
+                </ul>
+            </div>
+        </label>
+    </sidebar>
+
+    <home class="home-page">
+        <main class="main-container">
+
+            <search class="input-container">
+                <input class="city-input" type="text" placeholder="Search City" type="text">
+                <button class="search-btn">
+                <span class="material-icons">search</span>
+                </button>
+            </search>
+
+       
+       
+       
+        <section class="Weather-info" style=" display: none";>
+            <div class="location-date-container">
+                <div class="location">
+                    <span class="material-icons">
+                        location_on
+                    </span>
+                    <h4 class="country-txt">Ranchi</h4>
+                </div>
+                <h5 class="current-date-txt">Wed, 07 aug</h5>
+            </div>
+
+                <div class="weather-summary-container">
+                    <img src="./img/clouds.svg" alt="" class="weather-summary-img">
+                    <div class="weather-summary-info">
+                        <h1 class="temp-text">29 °C</h1>
+                        <h3 class="condition-txt regular-txt">Clouds</h3>
+                    </div>
+                </div>
+
+                <div class="weather-conditions-container">
+                    <div class="condition-item">
+                         <span class="material-icons">
+                                water_drop
+                        </span>
+                        <div class="condition-info">
+                                <h5 class="regular-txt">Humidity</h5>
+                                <h5 class="humidity-value-txt">88%</h5>
+                    </div>
+                </div>
+
+                <div class="condition-item">
+                    <span class="material-icons">
+                          air
+                    </span>
+                    <div class="condition-info">
+                        <h5 class="regular-txt">Wind Speed</h5>
+                        <h5 class="wind-value-txt">88 M/s</h5>
+                    </div>
+                </div>
+            </div> 
+             
+            <div class="forcast-items-container">
+                <div class="forcast-item">
+                    <h5 class="forcast-item-data regular-txt">05 Aug</h5>
+                    <img src="./img/thunderstorm.svg" class="forcast-item-img">
+                    <h5 class="forcast-item-temp">29 °C</h5>
+                </div>
+
+                <div class="forcast-item">
+                    <h5 class="forcast-item-data regular-txt">05 Aug</h5>
+                    <img src="./img/thunderstorm.svg" class="forcast-item-img">
+                    <h5 class="forcast-item-temp">29 °C</h5>
+                </div>
+
+                <div class="forcast-item">
+                    <h5 class="forcast-item-data regular-txt">05 Aug</h5>
+                    <img src="./img/thunderstorm.svg" class="forcast-item-img">
+                    <h5 class="forcast-item-temp">29 °C</h5>
+                </div>
+                
+                <div class="forcast-item">
+                    <h5 class="forcast-item-data regular-txt">05 Aug</h5>
+                    <img src="./img/thunderstorm.svg" class="forcast-item-img">
+                    <h5 class="forcast-item-temp">29 °C</h5>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="search-city section-message">
+            <img src="./img/search-city.png">
+            <div>
+                <h1>Search City</h1>
+                <h4 class="regular-txt">
+                    Find out the weather condition of the city
+                </h4>
+            </div>
+        </section>
+
+        <section class="not-found section-message" style="display: none;">
+            <img src="./img/not-found.png" >
+            <div>
+                <h1>Search City</h1>
+                <h4 class="regular-txt">
+                    Find out the weather condition of the city
+                </h4>
+            </div>
+        </section>
+        </main> 
+    </home>
+
+    <map>
+        <h1 class="map-txt">🌍 Weather Forecast Map</h1>
+        <div id="map"></div>
+        <div id="weather-info">
+        <h3 class="map-txt-color">Click on the map to get the weather.</h3>
+        </div> 
+        <footer>
+            <h4>&copy; all rights</h3>
+        </footer>
+    </map>
+    
+    <script src="./main.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="./Map/map.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+.news-body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #cdf0f9;
+  }
+  
+  .news-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+.news-heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+  }
+  
+  .tab-btn {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .tab-btn.active {
+    border-bottom: 3px solid #007BFF;
+    color: #007BFF;
+  }
+  
+  .tab-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .tab-content.active {
+    display: block;
+    opacity: 1;
+  }
+  
+  .news-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .news-list li {
+    margin-bottom: 10px;
+  }
+  
+  .news-list a {
+    text-decoration: none;
+    color: #007BFF;
+  }
+  
+  .news-list a:hover {
+    text-decoration: underline;
+  }
+  
+  #weather-result {
+    background: #f0f8ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  
+  @media (max-width: 600px) {
+    .tabs {
+      flex-direction: column;
+    }
+  
+    .tab-btn {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+
+  .news-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .news-item .news-img {
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .news-text {
+    flex: 1;
+  }
+  
+  .news-text  {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .news-text .news-p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  @media (max-width: 600px) {
+    .news-item {
+      flex-direction: column;
+    }
+  
+    .news-item .news-img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  

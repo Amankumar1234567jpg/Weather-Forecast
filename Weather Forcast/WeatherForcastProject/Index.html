@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Forecast</title>
+  <link rel="stylesheet" href="Main.css" />
+  <link rel="stylesheet" href="./map.css" />
+  <link rel="stylesheet" href="./sidebar/sidebar.css" />
+  <link rel="stylesheet" href="./footer/footer.css">
+  <link rel="stylesheet" href="./newspaper/newspaper.css">
+
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> -->
+</head>
+
+<body> 
+  <!-- NAVBAR -->
+  <label class="navbar">
+    <div id="nav-txt"> </div>
+</label>
+  <!-- SIDEBAR -->
+  <label class="sidebar-body">
+    <input id="sidebar-input-checkbox" type="checkbox">
+    <div class="toggle">
+        <span class="topline common"></span>
+        <span class="midline common"></span>
+        <span class="bottomline common"></span>
+    </div>
+    <div class="slide">
+        <h1 id="sidebar-txt" > Setting </h1>
+        <ul class="sidebar-ul"> 
+            <li class="sidebar-li"><a class="sidebar-a" href="#weather-body"><i class="fa-solid fa-user"></i><span> Home</span></a></li>
+            <li class="sidebar-li"><a class="sidebar-a" href="./map.html"><i class="fa-solid fa-gamepad"></i></i><span> Map</span></a></li>
+            <li class="sidebar-li"><a class="sidebar-a" href="#news-body"><i class="fa-solid fa-play"></i><span> News</span></a></li>
+            <li class="sidebar-li"><a class="sidebar-a" href=""><i class="fa-solid fa-wallet"></i><span> Wallet</span></a></li>
+            <li class="sidebar-li"><a class="sidebar-a" href=""><i class="fa-solid fa-phone"></i><span> Support</span></a></li>
+        </ul>
+    </div>
+</label>
+
+  <!-- SIDEBAR -->
+  <!--BODY-->
+  <div id="weather-body">
+  <div class="weather-container">
+    <h1 class="weather-heading-text">Weather Forecast</h1>
+    <div class="search-bar">
+      <input type="text" id="city-input" placeholder="Enter city name" />
+      <button onclick="getWeather()"><span id="search-btn" class="material-icons">search</span></button>
+    </div>
+    <div class="weather-info">
+      <h2 id="city-name">Ranchi, India</h2>
+      <p><i class="material-icons">device_thermostat</i> <strong>Temperature:</strong> <span id="temp">--</span>°C</p>
+      <p><img src="./img/clouds.svg"> <strong>Weather:</strong> <span id="weather">--</span></p>
+      <p><i class="material-icons">air</i> <strong>Wind:</strong> <span id="wind">--</span> km/h</p>
+      <p><i class="material-icons">cloud</i> <strong>Clouds:</strong> <span id="clouds">--</span>%</p>
+      <p><img src="./img/thunderstorm.svg"> <strong>Rain:</strong> <span id="rain">--</span> mm</p>
+    </div>
+    
+    <div class="forecast">
+      <h2 id="day5-heading-text">5-Day Forecast</h2>
+      <div id="forecast-cards"></div>
+    </div>
+  </div>
+  </div>
+  <!-- BODY-->
+  <!-- NEWSPAPER -->
+  <label id="news-body">
+    <div class="news-container">
+      <h1 class="news-heading"> News</h1>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="showTab(event, 'world')">World</button>
+        <button class="tab-btn" onclick="showTab(event, 'technology')">Technology</button>
+        <button class="tab-btn" onclick="showTab(event, 'sports')">Sports</button>
+        <button class="tab-btn" onclick="showTab(event, 'weather')">Weather</button>
+      </div>
+      <div id="world" class="tab-content active">
+        <h2 class="news-text">World News</h2>
+        <ul id="world-news" class="news-list"></ul>
+      </div>
+      <div id="technology" class="tab-content">
+        <h2 class="news-text">Technology News</h2>
+        <ul id="technology-news" class="news-list"></ul>
+      </div>
+      <div id="sports" class="tab-content">
+        <h2 class="news-text">Sports News</h2>
+        <ul id="sports-news" class="news-list"></ul>
+      </div>
+      <!-- <div id="weather" class="tab-content">
+        <h2>Weather</h2>
+        <div id="weather-result"></div>
+      </div> -->
+    </div>
+  </label> 
+
+  <!-- NEWSPAPER -->
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section about">
+        <h2 class="footer-headlines">About Us</h2>
+        <p>We provide latest news and weather updates from around the world.</p>
+      </div>
+  
+      <div class="footer-section links">
+        <h2 class="footer-headlines">Quick Links</h2>
+        <ul class="footer-ul">
+          <li class="footer-li"><a class="footer-a" href="#">Home</a></li>
+          <li class="footer-li"><a class="footer-a" href="#">Weather</a></li>
+          <li class="footer-li"><a class="footer-a" href="./map.html">Map</a></li>
+          <li class="footer-li"><a class="footer-a" href="#">Contact</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section contact">
+        <h2 class="footer-headlines">Contact</h2>
+        <p>Email: support@yourdomain.com</p>
+        <p>Phone: +123 456 7890</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 YourWebsite | Designed by You
+    </div>
+  </footer>
+  <!-- FOOTER -->
+  
+<script src="./Main.js"></script>
+<script src="./newspaper/newspaper.js"></script>
+
+</body>
+</html>
